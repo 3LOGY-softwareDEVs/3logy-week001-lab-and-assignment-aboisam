@@ -5,8 +5,10 @@
 //Display which requirements are missing (if any)
 
 let userPassword = "myCode1990"
-const hasNumber = 0-9
-const hasUppercase = "A-Z"
+
+const hasNumber = /[0-9]/.test(userPassword);
+const hasUppercase = /[A-Z]/.test(userPassword);
+
 if (userPassword.length >= 8) {
 console.log(`Password is valid! ${userPassword.length >= 8}`);
 } else {
